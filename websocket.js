@@ -7,6 +7,7 @@ const express = require("express"),
 const { calculateRevenue } = require("./app/controller/Order");
 
 const io = new Server(server, {
+  transports: ['websocket'],
   cors: {
     origin:["http://localhost:5173","https://ecommerce-dashboard-hrjg2oh3b-mxbilal.vercel.app/inventory"],
     methods: ["GET", "POST"],
