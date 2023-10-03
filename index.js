@@ -6,7 +6,11 @@ const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server, {
   cors: {
-    origin: "*",
+    origin: "https://ecommerce-dashboard-hrjg2oh3b-mxbilal.vercel.app",
+    methods: ["GET", "POST"],
+    allowedHeaders: ["my-custom-header"],
+    credentials: true,
+    allowedHeaders: ["my-custom-header"]
   },
 });
 const bodyParser = require("body-parser");
