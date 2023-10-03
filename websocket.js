@@ -8,7 +8,7 @@ const { calculateRevenue } = require("./app/controller/Order");
 
 const io = new Server(server, {
   cors: {
-    origin: "https://ecommerce-dashboard-hrjg2oh3b-mxbilal.vercel.app",
+    origin: "*",
     methods: ["GET", "POST"],
     allowedHeaders: ["my-custom-header"],
     credentials: true,
