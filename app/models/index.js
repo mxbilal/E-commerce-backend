@@ -6,7 +6,7 @@ const sequelizeInstance = new Sequelize(
   databaseConfig.PASSWORD,
   {
     host: databaseConfig.HOST,
-    port: 3306,
+    port: 11550,
     dialect: databaseConfig.dialect,
     operatorsAliases: 0,
 
