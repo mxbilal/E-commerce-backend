@@ -38,7 +38,7 @@ db.sequelize
   .sync({ alter: true })
   .then(() => {
     server.listen(process.env.SOCKET_PORT, () => {
-      console.log("listening on *:4000");
+      console.log("listening on",process.env.SOCKET_PORT);
     });
   })
   .catch((err) => {
