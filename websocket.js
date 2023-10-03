@@ -31,6 +31,16 @@ io.on("connection", async (socket) => {
     console.log("Client disconne  cted");
   });
 });
-server.listen(4000, () => {
-  console.log("listening on *:4000");
-});
+
+
+const db = require("./app/models");
+db.sequelize
+  .sync({ alter: true })
+  .then(() => {
+    server.listen(process.env.SOCKET_PORT, () => {
+      console.log("listening on *:4000");
+    });
+  })
+  .catch((err) => {
+    console.log("err", err);
+  });
